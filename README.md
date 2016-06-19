@@ -1,4 +1,4 @@
-A Dockerfile that provides a work environment for the Coursera course, [Machine Learning Foundations](A Case Study Approach https://www.coursera.org/learn/ml-foundations)
+A Dockerfile that provides a work environment for the Coursera course, Machine Learning Foundations.
 
 ## Build
   You will need a GraphLab license, which is free for academic, non-commercial use https://dato.com/learn/coursera/
