@@ -5,9 +5,16 @@ ARG GRAPHLABLIC
 ARG GRAPHLABUSER
 
 RUN pip install --upgrade --no-cache-dir https://get.graphlab.com/GraphLab-Create/1.10.1/${GRAPHLABUSER}/${GRAPHLABLIC}/GraphLab-Create-License.tar.gz; \
+    pip install --upgrade graphlab-create; \
     pip install jupyter; \
+    pip install numpy; \
+    pip install matplotlib; \
+    pip install scikit-learn; \
+    pip install scipy; \
     export DEBIAN_FRONTEND=noninteractive; \
-    apt-get update && apt-get upgrade -y && apt-get install -y supervisor vim xvfb x11vnc wget git fluxbox xterm
+    apt-get update && apt-get upgrade -y && apt-get install -y supervisor vim xvfb x11vnc wget git fluxbox xterm; \
+    RUN apt-get clean; \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
 ENV VNC_RESOLUTION 1280x960
 EXPOSE 5900
